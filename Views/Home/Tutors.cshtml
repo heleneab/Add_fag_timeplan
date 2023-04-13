@@ -1,0 +1,28 @@
+﻿@{
+
+    IEnumerable<Author> authors = ViewData["Authors"] as IEnumerable<Author>;
+    IEnumerable<Avaleble> avalebles = ViewData["Avalebles"] as IEnumerable<Avaleble>;
+}
+@{
+    ViewData["Title"] = "Tutors";
+}
+
+<h2>Our Tutors</h2>
+
+<h2>Fag</h2>
+
+<ul>
+
+    @foreach (var author in Model)
+    {
+        <li>@author.FirstName</li>
+        <li>@author.Fag</li>
+                   
+    }
+    
+    
+    @foreach (var avaleble in Model)
+      {
+        <li>@avaleble.Date</li>
+      }
+</ul>

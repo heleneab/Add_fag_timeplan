@@ -1,0 +1,57 @@
+﻿@model Author
+
+@{
+  ViewBag.Title = "title";
+  Layout = "_Layout";
+}
+
+<html>
+<body>
+<h2>Legg til fag</h2>
+
+
+<form method="post">
+  <div class="row mb-3">
+    <label asp-for="FirstName" class="col-sm-2 col-form-label"></label>
+    <div class="col-sm-3">
+      <input asp-for="FirstName" class="form-control">
+      <span asp-validation-for="FirstName" class="text-danger"></span>
+    </div>
+  </div>
+  <div class="row mb-3">
+    <label asp-for="Fag" class="col-sm-2 col-form-label"></label>
+    <div class="col-sm-3">
+      <input asp-for="Fag" class="form-control">
+      <span asp-validation-for="Fag" class="text-danger"></span>
+    </div>
+  </div>
+  
+  <p id="demo"></p>
+  <select id="month" onchange="setMonth()">
+    <option selected disabled>Velg Fag</option>
+    <option value="Matte">Matte</option>
+    <option value="Fysikk">Fysikk</option>
+    <option value="Engelsk">Engelsk</option>
+    <option value="Internet">Internet</option>
+    <option value="Data">Data</option>
+  </select>
+  <script>
+
+   var demo;
+    function setMonth(){
+      demo = document.getElementById('month').value;
+      document.getElementById("demo").innerHTML = demo;
+  
+    }
+  
+
+  </script>
+
+  
+
+  <input type="submit" class="btn btn-primary" value="Add author">
+</form>
+
+
+</body>
+</html>

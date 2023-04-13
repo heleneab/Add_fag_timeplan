@@ -1,0 +1,22 @@
+﻿@model IEnumerable<Author>
+
+@{
+  ViewBag.Title = "title";
+  Layout = "_Layout";
+}
+
+<h2>Fag</h2>
+
+<ul>
+
+  @foreach (var author in Model)
+  {
+    <li>@author.FirstName</li>
+    <li>@author.Fag</li>
+                   
+  }
+
+  
+</ul>
+
+<p><a asp-controller="Authors" asp-action="Add">Legg til fag du ønsker å undervise i</a></p>

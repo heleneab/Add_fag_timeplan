@@ -1,0 +1,21 @@
+﻿@model Avaleble
+
+@{
+    ViewBag.Title = "title";
+    Layout = "_Layout";
+}
+
+<h2>Add date</h2>
+
+<form method="post">
+  
+  <div class="row mb-3">
+    <label asp-for="Date" class="col-sm-2 col-form-label"></label>
+    <div class="col-sm-3">
+      <input asp-for="Date" class="form-control">
+      <span asp-validation-for="Date" class="text-danger"></span>
+    </div>
+  </div>
+  
+  <input type="submit" class="btn btn-primary" value="Add date">
+  </form>
